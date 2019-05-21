@@ -1,1 +1,1 @@
-Source for sildurs shaders website built hexo, using the next theme as a base.
+Source for sildurs shaders website built with hexo, using the next theme as a base.
