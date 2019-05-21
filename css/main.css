@@ -158,6 +158,8 @@ body {
   line-height: 2;
   color: #555;
   background: url("https://i.imgur.com/QLsF4kA.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 @media (max-width: 991px) {
   body {
@@ -281,7 +283,7 @@ span.exturl {
 }
 a:hover,
 span.exturl:hover {
-  color: #222;
+  color: #759db5;
   border-bottom-color: #222;
 }
 video {
@@ -2481,7 +2483,6 @@ ul.breadcrumb li+li:last-child {
   float: left;
   margin-left: -100%;
   width: 240px;
-  background: url("https://i.imgur.com/QLsF4kA.jpg");
   box-shadow: none;
 }
 @media (max-width: 991px) {
@@ -2567,7 +2568,7 @@ ul.breadcrumb li+li:last-child {
 .menu .menu-item a:hover,
 .menu .menu-item span.exturl:hover {
   background: #f9f9f9;
-  border-bottom-color: #fff;
+  border-bottom-color: #2b2b2b;
 }
 .menu-item-active a:after,
 .menu .menu-item a:hover:after,
@@ -2672,6 +2673,7 @@ ul.breadcrumb li+li:last-child {
 .sidebar {
   right: auto;
   bottom: auto;
+  background-color: rgba(0, 0, 0, 0);
   -webkit-transform: none;
 }
 .sidebar a,
@@ -2904,21 +2906,18 @@ ul.breadcrumb li+li:last-child {
 }
 .post-body h1 {
   font-size: 1.6em;
-  border-bottom: 1px solid url("https://i.imgur.com/QLsF4kA.jpg");
 }
 .post-body h1 code {
   font-size: 1em;
 }
 .post-body h2 {
   font-size: 1.45em;
-  border-bottom: 1px solid url("https://i.imgur.com/QLsF4kA.jpg");
 }
 .post-body h2 code {
   font-size: 1em;
 }
 .post-body h3 {
   font-size: 1.3em;
-  border-bottom: 1px dotted url("https://i.imgur.com/QLsF4kA.jpg");
 }
 .post-body h3 code {
   font-size: 1em;
