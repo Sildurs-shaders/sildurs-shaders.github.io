@@ -3035,3 +3035,16 @@ p,
 .site-author-name {
   color: rgba(255,255,255,0.42);
 }
+details > summary {
+  color: #adadad;
+}
+details > details {
+  margin-left: 15px;
+}
+details > p {
+  margin-left: 15px;
+  color:#424242;
+}
+details > b {
+  color: #adadad;
+}
