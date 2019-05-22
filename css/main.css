@@ -9,6 +9,19 @@ body {
 main {
   display: block;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+::-webkit-scrollbar-thumb {
+  background: #191919;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #131212; 
+}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
