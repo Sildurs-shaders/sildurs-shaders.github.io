@@ -3035,16 +3035,31 @@ p,
 .site-author-name {
   color: rgba(255,255,255,0.42);
 }
+@-moz-document url-prefix() {
+  details:hover > summary, details[open] > summary {
+    color: #b3b2b2;
+  }
+  details > summary {
+    cursor: pointer;  
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+ details:hover > summary, details[open] > summary {
+    color: #b3b2b2;
+  }
+  details > summary {
+    cursor: pointer;  
+  }
+}
 details > summary {
-  color: #adadad;
+  color: #8a8a8a;
 }
-details > details {
+details > details, details > p, details > b {
   margin-left: 15px;
 }
-details > p {
-  margin-left: 15px;
+details > p > i {  
   color:#424242;
 }
 details > b {
-  color: #adadad;
+  color: #d1d1d2;
 }
