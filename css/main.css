@@ -5,7 +5,6 @@ html {
 }
 body {
   margin: 0;
-  background-color: #171717;
 }
 main {
   display: block;
@@ -171,7 +170,7 @@ body {
   font-size: 12px;
   line-height: 2;
   color: #555;
-  background: url("https://i.imgur.com/wR86Atk.png") no-repeat center center fixed; 
+  background: #171717 url("https://i.imgur.com/wR86Atk.png") no-repeat center center fixed; 
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
