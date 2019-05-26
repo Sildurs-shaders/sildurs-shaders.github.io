@@ -170,9 +170,11 @@ body {
   font-size: 12px;
   line-height: 2;
   color: #555;
-  background: url("https://i.imgur.com/QLsF4kA.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: url("https://i.imgur.com/QLsF4kA.jpg") no-repeat center center fixed; 
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 @media (max-width: 991px) {
   body {
