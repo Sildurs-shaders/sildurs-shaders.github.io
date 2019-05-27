@@ -357,7 +357,79 @@
       
       <div class="post-body">
         
-        
+        <h1>Changelog:</h1><b>
+    
+    <p>
+  </p><pre style="
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;">
+    <code class="changelog">Enhanced Default v1.071:
+- Fixed various amd driver bugs, latest amd driver (19.2.3) should work again. Thanks to Tinyds for testing! (tested on a RX580)
+ 
+Enhanced Default v1.07:
+- Added ingame option Water texture to the reflections screen, allows you to turn off the water texture, so it will just be color.
+- Added new ingame options screen Normal map, contains the changes below:
+- Added support for parallax mapping
+- Replaced option bumpmapping with RP support, toggles between off/bumpmapping/parallax
+- Added ingame option RP Resolution, set it to your resourcepack resolution or higher to make pom smoother.
+- Added ingame option POM Depth, adjust to your liking.
+- Added ingame option POM Distance, adjust the distance at which parallax mapping renders.
+- Fixed composite error when turning off reflections while keeping godrays enabled.
+ 
+Enhanced Default v1.06:
+- Added godrays, disabled by default
+- Added option menu Sky, includes options for godrays, godrays intensity and godrays quality.
+*Fast godrays cause a low performance hit while fancy godrays cause a high performance hit.
+- Added debug option draw bumpmap normals.
+- Fixed and improved Bumpmapping, it's now fully working.
+- Fixed a bug with the horizon being visible underwater.
+- Fixed an issue with the sky being reflective at certain times.
+- Minor code optimizations and the sky bug being fixed results in another performance boost!
+- Removed the [redone] tag, should be clear by now that this is the rewritten version.
+ 
+Enhanced Default v1.052:
+- Fixed tallgrass / doubleplants again, my previous fix broke in the latest optifine preview 6.
+ 
+Enhanced default v1.051:
+- Adjusted lighting to prevent blocks from being overblown by light, like sand.
+- Added ingame option lighting strength to the shadows screen.
+- Added bumpmapping support, WIP, causes some lighting issues.
+- Fixed tallgrass / doubleplants from waving out of sync in 1.13+ (top and bottom half)
+- Fixed underwater fog!
+- Now works with 1.12.2 and below. 1.13+ requires optifine E3 pre4 or newer.
+ 
+Enhanced Default v1.04:
+- Added support for 1.13/1.13.1, use v1.031 for 1.12.2 and below.
+- Minor code changes/updates
+Currently broken: Underwater fog
+ 
+Enhanced Default v1.031:
+- Added ingame option Fog
+ 
+Enhanced Default v1.03:
+- More code cleanup and optimization, should increase performance by 10-15%
+ 
+Enhanced Default v1.02:
+- Fixed an issue with normals, resulting in an overall performance increase of about 30%!
+- Code optimizations and cleanup, further increasing the overall performance
+- Added debugging options in misc, depthbuffer isn't really used but might be neat for some screenshots
+- Added block.properties support, allowing you to easily add waving and reflections support for new blocks (modded blocks)
+- Removed individual reflections options, they are now grouped together due to block id mapping using block.properties (see below for more on that one)
+- Reduced shadow acne
+ 
+Enhanced Default v1.01
+- Improved performance, I get about 15-20fps more compared to v1.0. Make sure to update your optifine version, otherwise you might not gain that much of a boost.
+- Fixed fog under/in lava. You might have to update your optifine version for this to work.
+- Added ingame option Reflections Quality. (fast|fancy, default: fast)
+ 
+Enhanced [redone] v1.0
+- Initial release of rewritten enhanced default, everything has been improved.</code>
+   </pre>
+    </b>
           
         
       </div>
