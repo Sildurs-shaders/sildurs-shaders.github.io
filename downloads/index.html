@@ -382,7 +382,7 @@
 	</b></p><p>
 	
 	</p><p><b><h1>Previous versions:</h1>
-    	<details>
+    	<details id="legacy">
 		<summary>Legacy Vibrant Shaders</summary>
 		<details>
 			<summary>v1.20</summary>
@@ -830,7 +830,9 @@
 
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 
 
 
@@ -877,7 +879,14 @@
   <script src="/js/next-boot.js?v=7.1.1"></script>
 
 
-  
+<script type="text/javascript">
+	$(document).ready(function(){
+		var hash = window.location.hash.substring(1);
+		if(hash == "legacy"){
+			$("#lecagy").attr("open", true);
+		}
+	});
+</script>
 
   
 
