@@ -3037,6 +3037,16 @@ p,
 .site-author-name {
   color: rgba(255,255,255,0.42);
 }
+pre {
+  background-color: #00000000;
+  white-space: pre-wrap;
+}
+pre code.changelog {
+  background-color: #2b2b2b26;
+  border: 1px solid #9990;
+  display: block;
+  color: #898889
+}
 details:hover > summary, details[open] > summary {
   color: #b3b2b2;
 }
