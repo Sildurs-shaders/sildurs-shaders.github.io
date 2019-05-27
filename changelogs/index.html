@@ -7,7 +7,13 @@
 
 
 
-
+<style>
+.clactive {
+  display: block;
+}
+.clnon_active {
+  display: none;
+}</style>
 
 
 
@@ -122,7 +128,7 @@
   };
 </script>
 
-  <title>changelogs | Sildurs Shaders</title>
+  <title>Changelogs | Sildurs Shaders</title>
   
 
 
@@ -273,7 +279,9 @@
 
   </li>
 
-      
+	<li class="menu-item menu-item-changelogs menu-item-active">
+	     <a href="/changelogs" rel="section"><i class="menu-item-icon fa fa-fw fa-changelog"></i> <br>Changelogs</a>
+	</li>
       
     </ul>
   
@@ -338,9 +346,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">changelogs
-
-</h1>
+<h1 class="post-title" itemprop="name headline"></h1>
 
 <div class="post-meta">
   
@@ -357,7 +363,566 @@
       
       <div class="post-body">
         
-        
+        <h1>Changelogs:</h1><b> 
+
+  <a href="#vibrants">Vibrant Shaders</a>
+  <a href="#enhanceds" style="margin-left: 15px;">Enhanced Default</a>
+
+  
+  <div id="vibrants" class="element clactive">
+      <pre style="
+			padding-bottom: 0px;
+			padding-right: 0px;
+			padding-top: 0px;
+			padding-left: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.21:
+- Added support for MC 1.14+ (waving entities, new emissive blocks)
+- Updated shadows code and reduced shadow acne. This might improve performance on lower end systems slightly.
+- Added an ingame option to adjust the volumetric clouds height, found in the sky and lighting section. (yes you can also fly through them)
+- Updated water color slighty, made it a bit more blue.
+- Added a new ingame options section called Colors.
+- Added an ingame option to adjust water color found in the new Colors section.
+- Added an ingame option to adjust color contrast, found in the new Colors section.
+- Added an ingame option to adjust color brightness, found in the new Colors section.
+- Removed ingame option colorboost. Contrast and brightness allow you to fine tune colors better.
+- Added waving water and an option to toggle it.
+- Added an ingame option to adjust the amplitude (height) of water waves.
+- Updated waving lilypads to be in sync with waving water.
+- Added an ingame option to adjust the noise amount of rain reflections. Higher values mean less noise.
+- Added a new ingame options section called Shading.
+- Moved Ambient occlusion to the new shading section.
+- Added an ingame option to adjust the ambient occlusion strength/amount.
+- Moved Celshading to the new shading section.
+- Updated celshading code.
+- Added an ingame option to adjust the border thickness of celshading.
+- Added an ingame option to adjust the search radius of celshading.
+- Moved option Moonlight to the Sky & Lighting section.
+- Reduced buffer accuracy resulting in a small perfomance increase!
+- Expanded values range of option minlight. (0.002 - 0.02)
+- Fixed broken reflections on MacOS with amd cards.
+- Fixed broken parallax mapping on amd cards running linux drivers
+- Updated overworld fog color slighty, gave it some of that blue color back, like it used to be in older versions.
+- Volumetric lighting now auto disables godrays since they're not compatible.
+
+Vibrant shaders v1.20:
+- Added a reflections section to the option menu.
+- Added rain reflections, wetness effect while and after raining. Enabled in high and extreme by default. (WIP)
+*Note: This requires optifine 1.13.2 E7 pre2 for now, if you don't use that version disable the biome check, see below. Upcoming optifine updates for older versions should fix that.
+- Added an ingame option to disable the biome check for rain reflections / wetness. Turn off the biome check if rain reflections / wetness won't show up.
+- Added an ingame option to disable water reflections (all reflections actually)
+- Merged lite and main branch, meaning that lite users can now enable water reflections if they want to. Let me know of any performance regressions!
+- Various code optimizations and refactoring
+- Moved ice and glass reflections to the new reflections section.
+- Moved cloud reflections and cloud reflections quality to the new reflections section.
+- Adjusted the raytracer used for all reflections, very slight decrease in quality but about a 10% performance increase!
+- Added an ingame option to adjust the default sun and moon angle to the sky options section.
+- Fixed various amd drivers bugs. Latest amd driver (19.2.3) should work fine now. Thanks to Tinyds for testing! (tested on a RX580)
+- Fixed lighting on entities underwater / in water.
+- Fixed emissive lighting on rain/weather, ingame changes to emissive lighting will now affect it correctly.
+- Fixed blurred hand in nether if depth of field was enabled
+- Fixed various issues with water and sky rendering
+- Fixed/removed beacon beam shadows
+- Fixed entities rendering while raining
+
+Vibrant shaders v1.19:
+- Added support for blindness (effect blindness, black fog)
+- Added support for nightvision
+- Added lava fog while under/in lava
+- Reworked and improved bump and parallax mapping
+- Replaced option section Parallax mapping with Normal map
+- Replaced option parallax mapping with RP support, toggles between off/bumpmapping/parallax
+- Added ingame option RP Resolution, set it to your resourcepack resolution or higher to make pom smoother.
+- Added parallax mapping support for x32 textures.
+- Added ingame option POM Depth, adjust to your liking.
+- Added ingame option POM Distance, adjust the distance at which parallax mapping renders.
+- Moved option water texture to the new Normal map options section.
+- Improved volumetric clouds color-blending while raining
+- Fixed flashing water on amd cards, introduced in driver 18.8.1+ (workaround)
+- Fixed weird outlines on amd cards. (workaround, cloudsblur will blur distance land abit, only on amd cards)
+- Fixed black sky while raining and being underwater
+- Fixed broken sky while raining when looking through stained glass (transparent blocks)
+- Minor code optimizations
+**I know rain reflections, puddles, wetness was requested alot, there's a wip version in lite, it doesn't have reflections yet. 
+Just letting you guys know, that I'm working on it..**
+
+Vibrant shaders v1.18:
+- Improved sky during sunrise and sunset (transition from sun and moon, ticks 12250 and 23000)
+- Improved water refraction and caustics.
+- Minor code optimizations.
+- Added custom stars and an ingame option to toggle them. (ty robobo1221)
+- Added ingame option default skybox/stars to the sky options screen, causes some lighting issues with the sky during sunset and sunrise. 
+- Disabled support for default stars / skybox by default.
+- Disabled alternative weather angle by default, you can still turn it back on if you want to.
+- Fixed a bug caused by optimizations which caused certain particles to not render against the sky - firework particles finally work!
+- Fixed option shader moon, it will now enable the default moon once it's disabled.
+- Fixed tallgrass / doubleplants from waving out of sync in 1.13+ (top and bottom half)
+- Fixed a bug with the horizon while underwater.
+- Found the cause of broken block animations, fixed in optifine pre6 and newer.
+- Removed default underwater texture overlay
+
+Vibrant shaders v1.173:
+- Added ingame option cloudsblur, blurres the sky abit, making volumetric clouds less "noisy", enabled by default, very low performance hit. Unfortunately it won't work with MB or DoF enabled.
+- Now works with 1.12.2 and below. 1.13+ requires optifine E3 pre4.
+- removed basic end shaders.
+
+Vibrant shaders v1.172:
+- Added ingame option minlight to the emissive lighting options, allowing you to tweak the brightness / min light inside caves etc.
+- fixed connected textures being reflective / textures with translucent layers
+want your custom block to be reflective? Add it to ice in block.properties
+- fixed depth of field blurring your hand
+- fixed underwater shadows
+- various code improvements
+
+Vibrant shaders v1.1712 Lite:
+- Fixed water for 1.13/1.13.1
+
+Vibrant shaders v1.171 alpha:
+- Updated underwater fog color, it's now based on sky color and changes based on time of day
+- Added support for underwater fog color per biome, it's now greenish in swamp biomes. (experimental)
+- Added options screen Emissive Light, containing sliders for red, green and blue - you're now able to change torch/glowstone/whatever color ingame.
+- Added support for block.properties, check it out if you want to add new IDs to waving entities or reflective blocks.
+- Updated parallax mapping code and fixed weird "warping" issues
+- Fixed underwater shadows
+Currently broken:
+Water and lava, their new nominal IDs won't work in the shadersmod, wait for optifine update
+Going inside underwater plants or certain underwater effects will break a function called IsEyeInWater, which in return breaks everything that uses this function, wait for optifine update
+Tall grass/Tall flowers, top half out of sync ..again
+
+Vibrant shaders v1.17:
+- Added volumetric clouds (They are faster than 2D clouds! ~15% performance increase)
+- Expanded cloud options in sky & lighting options screen.
+- Improved motionblur quality
+- Improved blending between sky and land if volumetric lighting is enabled (still prefer godrays)
+- Various code improvements and cleanup based on enhanced default resulting in minor performance boost
+- Removed an outdated ingame option previously required for mc 1.8.x
+- Increased texture visibility of water if watertex is enabled
+- Updated legacy code to new optifine standards (1.7.10+)
+Previous changes which you might missed:
+- Updated water visuals
+- Added ingame option water height found in parallax option screen.
+- Added ingame option water texture, it blends your resourcepack texture with the water color, so it might not be that visible.
+
+Vibrant shaders 1.166:
+- Fixed lighting on transparent blocks during night time
+
+Vibrant shaders 1.165:
+- Downported water from upcoming v1.17
+- Added ingame option water height found in parallax option screen.
+- Added ingame option water texture, it blends your resourcepack texture with the water color, so it might not be that visible.
+
+Vibrant shaders 1.164:
+- Fixed bloom in nether
+- Ported improved colored shadows from enhanced default to vibrant shaders!
+
+Vibrant shaders 1.163:
+- Fixed weird color issues on newer nvidia drivers (381.65, 381.78)
+- Added waving tallgrass
+
+Vibrant shaders 1.162:
+- Added water parallax mapping (medium - extreme, can be toggled in parallax mapping option, disabled by default in medium)
+- Added support for User friendly options. Update optifine to one of the many preview versions to make use of this:
+http://optifine.net/downloads
+The preview version for 1.8.9 no longer requires you to enable the ingame MC1.8 option! (OF author backported shadersmod improvements from 1.11.2)
+- Various code improvements
+- Improved water visuals, adjusted colors
+- Volumetric lighting now automaticly disables godrays
+- Fixed flashing black square caused by bloom
+- Fixed white border caused by bloom for fermi nvidia gpus and some intel gpus
+
+Vibrant shaders 1.161:
+- Fixed rendering of non moving entities (like chests, signs etc)
+- Fixed lines in water, thanks to Builderb0y
+- Fixed End shaders
+- Improved lighting on chests, signs etc.
+
+Vibrant shaders 1.16:
+- Reworked rendering system to fix a bunch of issues, see below:
+- Fixed stained glass colors near lightsources
+- Fixed entities rendering (players etc)
+- Fixed hand rendering
+- Fixed translucent blocks rendering (stained glass etc)
+- Fixed rendering of enchanted items (armor, weapons etc)
+- Fixed distance dof/blur, blurring your hand
+- Fixed motionblur blurring your hand
+- Fixed underwater shadows
+- Fixed block selection color (leads are a bit broken because of this)
+- Fixed rain on water/translucent blocks
+- Fixed light bleeding in caves
+- Fixed weird color issues on certain systems
+- Fixed lines in water thanks to BuilderB0y
+- Code optimizations to reduce potential errors on certain systems. (Like weird colors)
+- Improved support for translucent blocks, mods that add translucent blocks should work better now.
+- Improved bloom
+- Improved lens flare
+- Improved water caustics
+- Improved water ripples
+- Improved lighting
+- Improved motionblur
+- Improved ambient occlusion (it's now only enabled in extreme, because it causes huge slowdowns with lots of entities nearby)
+- Added Volumetric lighting (based off chocapics beta release, WIP)
+- Added an ingame option to toggle volumetric lighting, found in sky options. Disable godrays before enabling it.
+- Added waving beetroot
+- Added an ingame option to adjust the motionblur strength
+- Added an ingame option to adjust the bloom strength
+- Added an ingame option to toggle ice and stained glass reflections
+- Adjusted water colors
+- Adjusted colors, they were abit over the top.
+- Color boost can now be adjusted ingame:
+0.04 = old color boost set to off.
+0.2 = new adjusted colors
+0.35 = old color boost set to on.
+- Removed dynamic handheld light due to rendering issues. Use the inbuild "Dynamic Lights" option from Optifine.
+Found in options -> video settings -> quality. Or options -> video settings.
+Known issues:
+- Bloom on torches can become to strong if they are next to each other because they light themself up.
+
+Vibrant v1.153:
+- Improved lighting on mobs in caves.
+- Fixed transparent mobs in nether for some intel and amd gpus.
+- Fixed hand flickering on some amd gpus. (tested on hd6870, driver 16.2.1)
+- Fixed nether sky being rendered ontop of transparent blocks.
+- Applied a temporary fix for transparent blocks in nether for all systems. It depens on your GPU how well it works / looks.
+- Applied a temporary fix for enchanted stuff, it shows the effect on some items but the colors are abit off. (requires optifine shadersmod, so 1.8+)
+Thanks to Vico, Turtac and Digitalshadowhawk for testing.
+*Know issues: Colors of stained glass and ice in nether might look abit off depending on the GPU (mostly amd and intel). Still released this patch because they are no longer invisible.
+Temponary fixes will be resolved in the future, I have to rework the way things are rendered to fix everything correctly.
+
+Vibrant v1.152:
+- Improved sky while raining on lite preset.
+- Fixed flickering on hand / handheld items (for intel gpus). Thanks to Vico for testing.
+- Fixed fog rendering in nether.
+- Fixed fog rendering through transparency in nether.
+- Fixed pixelated screen if bloom is disabled.
+- Fixed bloom option in nether.
+*Know issues:
+Transparency isn't rendering correctly in nether for Intel gpus, not sure why.
+
+Vibrant v1.151 hotfix:
+- Fixed issues with compiling the shaderpack on intel gpus.
+- Fixed text on signs if parallax mapping is enabled.
+Some undocumented changes, missing from the previous changelog:
+- Moon is now also drawn by the shaderpack, like the sun.
+- Added an ingame option to toggle the shader moon. 
+If it overlaps with the default moon either disable it in video settings -> details -> Sun & Moon. Or disable the shader moon.
+
+Vibrant v1.15:
+- Improved shadow distance.
+- Shadows go through water now.
+- Shadows can be disabled now. (added an ingame option to disable shadows)
+- Added an ingame option to toggle shadows.
+- Light from emissive blocks now goes through water instead of ontop.
+- Almost full transparency support. (stained glass, ice etc)
+- Improved godrays.
+- Improved sky and general lighting colors.
+- Improved sun glow.
+- Improved water transparency.
+- Improved water visuals for all presets (lite - extreme)
+- Adjusted water colors.
+- Changed rain/snow angle, it no longer falls straight down.
+- Added an ingame option to toggle the alternative weather angle.
+- Fixed issues with particles and transparency.
+- Added subtile ice reflections.
+- Added subtile stained glass reflections.
+- SSAO replaced with SSDO, it's faster and more accurate. (Ambient occlusion)
+- You don't like how colorful everything is? No problem, added an ingame option to toggle the color boost.
+- Added a new option called whiteworld which makes replaces every color with white. Screenshot -> https://i.imgur.com/xziUB8O.png
+- Added an ingame option to toggle mobs flashing red when hurt
+- Added an ingame option to toggle underwater fog
+- Added an ingame option to adjust the view distance of distance-blur (dof)
+- Added parallax mapping. (parallax mapping depth is based on what your pom res is set to)
+- Added an ingame options for parallax mapping and it's resolution.
+- Added waving water
+- Added an ingame option to toggle waving water
+- Optimized water code, reduced if statements since they are somewhat slow.
+- Improved red flashing mobs while hurt, thanks to Sp614x.
+- Reduced noise texture resolution from 1024 to 512, this will increase the overall performance by quite a bit!
+- Optimized code to reduce visual differences caused by lower noise texture.
+- Fixed leashes.
+- Improved overall performance of vibrant shaders.
+- Added colored shadows! (if going through stained glass).
+- Added an ingame option to toggle colored shadows.
+- Added bump mapping. (it's tied to parallax mapping)
+- Optimized both bump mapping and parallax code alot.
+- Added an ingame option to toggle clouds (in sky options)
+- Added an ingame option to toggle cloud reflections. (in sky options, only enabled in extreme)
+- Clouds move slower now.
+- Renamed sun effects to sky options
+- Added nether shaders!
+- The End now makes use of my basic shaders (until I work something out for them)
+***
+Know issues and more:
+- Transparency can sometimes look abit off
+- Entities (players, mobs and such) can look a bit off at times. (Applied a temporary fix to prevent issues with transparency on entities)
+- Lens flares is applied to everything bright (intended by chocapic), but it's rather annoying for gameplay. So disabled by default until recoded. Also requires bloom to be enabled.
+- Bloom is not final, but the current one should be faster compared to v1.141.
+- Motionblur affects your hand / handheld items, same for depth of field.
+- Lite preset is no longer that cut down, the only thing that's missing are reflections.
+
+Vibrant 1.141:
+- Added an ingame option to change the amount of blur used by bloom.
+- Reduced the amount of blur used by bloom a bit. Reducing blur makes the bloom effect abit weaker.
+- Added an ingame option to adjust the lighting strength of emissive blocks, like torches.
+- Lighting strength of emissive blocks is NO LONGER AFFECTED BY MOONLIGHT.
+- Bloom strength is NO LONGER AFFECTED BY MOONLIGHT.
+- Increased the max. allowed value for moonlight to 0.10.
+- The whole lighting system has been rewritten, it's way better and less hardcoded now. (To allow tweaks)
+- Alot smoother transitions between lighting states. No more jumpy lighting switches between day/night/inside
+- Cleaned and optimized code(small performance boost), no more double defines @Sp614x
+- Fixed and improved handheld items that cast light. Their light range is no longer nearly infinite.
+- Mobs now flash red again when hurt.
+
+Vibrant 1.14:
+- New, much better bloom.
+- Godrays are no longer visible while raining.
+- Nights are now a bit brighter.
+- Everything is now less dark while raining.
+- Shadows are now a bit darker, to increase contrast and compensate for increased brightness caused by bloom.
+- Overall some minor lighting changes, improvements and bugfixes.
+- Emissive blocks now look better even if bloom is disabled.
+- Motionblur works way better with the new bloom, I can only recommend it.
+
+Vibrant 1.13:
+- NEW, simple water caustics, also slightly changed transparency of water
+- NEW, added more options that can be tweaked ingame is using Optifine 1.8.9 G9 or higher.
+For example: Brightness during night time can be adjusted ingame now. Also things like shadow distance and resolution can be changed while playing.
+
+Vibrant 1.12
+- FIXED, Depth of field, thanks to Skate702 for indirectly reporting this issue.
+
+Vibrant 1.11
+- FIXED, Cel shading, thanks to Apechief for pointing that out!
+- Updated whole shaderpack to support new optifine features better (Requires optifine 1.8.9 G9 or newer)
+
+Vibrant 1.10
+- NEW, simple HDR, your "eyes" now adjust to the lighting, for example: if you go out of a cave everything will be bright for a few seconds.
+- NEW, Water has changed again, can be seen in the screenshot!
+- FIXED, Bloom no longer gets cut of by the sky.
+- FIXED, Leaves in the distance are no longer bright.
+- IMPROVED, Bloom is less pixelated now, without a loss of performance!
+- CHANGED, Turned bloom a bit down, as suggested a few times.
+Important notes:
+Lite and medium should experience a boost in performance, about 10-20fps more compared to v1.09!
+High and extreme are now a bit more performance tanking in areas with water, before everyone starts to cry, it's only about 5fps worse compared to v1.09.
+
+Vibrant 1.09:
+- FIXED, Ice blocks in water.
+- FIXED, Stars, they are visible at night again!
+- FIXED, Maps, they are displayed correctly now.
+- ADDED, Workarround to disable Minecraft's Pseudo lighting system. You can disable my workarround if you like the default MC lighting which darkens sides of blocks.
+- ADDED, Cloud "distortion" for a more realistic movement.
+- CHANGED, Sun glow at night no longer has the same redish color like daytime. It's now more blue-ish. (Moon glow)
+- CHANGED, Godrays are now located in final.fsh and have been merged with lens flare code to reduce duplicated code.
+- Code has been cleaned up A LOT, also lots of optimations being made. Performance should've increased for about 5-15frames!
+
+Vibrant 1.08:
+- FIXED almost all bloom issues, see bloom changes below
+- NEW Bloom is now only active in dark areas, like caves or certain houses. (Based on the lightlevel arround your character)
+Bloom is also enabled during raining and night time.
+- FIXED Vines are no longer glitching through blocks
+- FIXED weird-redish lighting in caves / dark areas
+- FIXED Distance blur, it no longer affects the sky.
+- FIXED Fog in caves and houses while raining
+- NEW Lens flare from newest chocapic branch has been ported over for more customization in the future
+- FIXED New Lens flare caused a blackscreen while looking at the moon / away from the sun.
+- NEW Fog now has it's own color in caves / dark places
+- NEW Water has been reworked, looks pretty awesome!
+
+Vibrant 1.07 (beta) - Updated to newest chocapic version, read his updated agreement / rules!
+- NEW Fog color now adjust according to world lighting
+- NEW Subsurface scattering, can be seen while raining.
+- OPTIMIZED Clouds are no longer calculated twice for sky and water.
+- OPTIMIZED Sun, it's no longer just a huge white spot.
+- IMPROVED World lighting and colors
+- FIXED Distance blur no longer affects the sky.
+- REMOVED Wetness while raining, it will come back tho. Don't worry
+----Know issues----
+- Bloom causes blending from sky into ground / objects. It's only enabled in extreme because of that.
+- Bloom can result in overbrightness
+- Lighting in dungeons is to bright / redish
+
+Vibrant 1.06
+- NEW Motionblur, it's working well
+- NEW Underwater fog
+- NEW Lens flare
+- NEW Water ripples
+- NEW Water "lighting"
+- IMPROVED Fog
+- IMPROVED Overall lighting
+- REWORKED lighting system from torches
+- AND MUCH MUCH MORE, GO CHECK IT OUT INGAME YOURSELF!
+
+
+Vibrant 1.053
+- TWEAKED Water waves
+- Minor code optimations
+- REMOVED PoM and Specular mapping for now..(to fps draining)
+
+
+Vibrant 1.052
+- NEW Motion blur!
+- NEW HDR effect! Thanks to DeDelner
+- NEW Water refraction
+- TWEAKED Water waves (ripples)
+- TWEAKED Lighting from torches etc.
+- CHANGED Ultra version now uses DoF as in older releases
+
+
+Vibrant 1.051
+- CHANGE Bloom got another rework
+- CHANGE Torches etc are now brighter and got a new color tone
+- NEW Added a workarround for macs with very low fps, can be enabled in composite.fsh
+
+Vibrant 1.05
+- NEW Bloom method
+- NEW Colors (Tonemapping and such)
+- NEW 2D Clouds, taking almost no fps.
+- NEW Bokeh DoF and distance blur
+- NEW Water ripples
+- NEW Water reflections
+- NEW Reflections when raining / wetness
+- NEW Sun
+- NEW Torchlight color
+- NEW/BETTER Godrays
+- NEW FOG finally!
+- NEW Underwater is now kinda foggy
+- FIXED black night
+- FIXED flickering
+- FIXED SSAO
+- FIXED a hell lot more bugs
+- More optimized
+Probably way more changes, but I can't remember them all.
+Works with PC's and Mac's with Nvidia and some AMD cards (plz report your result if it doesnt work, by also posting the devlog from the minecraft launcher into a spoiler. This helps me the most, I still need to know at least your OS and graphic card)
+
+Vibrant 1.03
+- Fixed specular mapping (reflections)
+- Added parallax mapping (pom, requires adjusted TP)
+- Way better night can be disabled in composite.fsh
+- Sharper shadows without fps hit
+- White screen caused by lens flare probably fixed
+- Added version for Intel cards
+- Better sun and sky
+- probably some more changes which I forgot
+
+Vibrant 1.02
+- Added new waving objects from 1.7.2
+
+Vibrant 1.01
+- fixed blurred hand when using depth of field
+
+Vibrant 1.0
+- Bunch of bugfixes and improvments
+- All versions works with any Nvidia drivers now. (Im on the latest beta for ex.)
+- Motionblur added, currently overlapping with Godrays, so you can only use one. (Found in composite1.fsh, but dont use it yet, requires more work)
+- No depth of field pre-configured download added
+* TODO *
+- Fog
+- Better glowing effects
+- Parallax mapping
+- ...
+
+Vibrant Pre9.
+- fixed weird white transparent "screen"
+- fixed black ground while looking away from the sun
+- Activated Ice and Netherportal reflections in max and max+celshading (May be tweaked and optimized in future update)
+- Added handeld items casting light ~ from Chocapics WIP9. Can be activated in composite.fsh
+- Darker nights added
+- Optimized even a little bit more
+
+Vibrant Pre8.3
+- fixed weird looking ice (reworked how I changed the water color)
+- Specular mapping is kinda fixed - can look weird sometimes
+
+Vibrant Pre8.2
+- Godrays
+- Handheld items like torches cast light (enable in composite.fsh)
+- New water color WIP *Ice is a bit buggy
+- Screen gets brighter while looking at the sun WIP
+- Basic function for a better night added
+- Fixed SSAO
+There will be a few other bugs maybe, its a preview
+
+Vibrant Pre7.1
+- Fixed specular mapping
+
+Vibrant Pre7
+- Added basic lens flare
+- Merged with chocapics rain flares
+- Added specular mapping back (broken, fixed in 7.1)
+- Reworked water shader again
+- Ssao currently broken</code>
+		</pre>
+  </div>
+  <div id="enhanceds" class="element clnon_active">
+      <pre style="
+			padding-bottom: 0px;
+			padding-right: 0px;
+			padding-top: 0px;
+			padding-left: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;"><code class="changelog">Enhanced Default v1.071:
+- Fixed various amd driver bugs, latest amd driver (19.2.3) should work again. Thanks to Tinyds for testing! (tested on a RX580)
+ 
+Enhanced Default v1.07:
+- Added ingame option Water texture to the reflections screen, allows you to turn off the water texture, so it will just be color.
+- Added new ingame options screen Normal map, contains the changes below:
+- Added support for parallax mapping
+- Replaced option bumpmapping with RP support, toggles between off/bumpmapping/parallax
+- Added ingame option RP Resolution, set it to your resourcepack resolution or higher to make pom smoother.
+- Added ingame option POM Depth, adjust to your liking.
+- Added ingame option POM Distance, adjust the distance at which parallax mapping renders.
+- Fixed composite error when turning off reflections while keeping godrays enabled.
+ 
+Enhanced Default v1.06:
+- Added godrays, disabled by default
+- Added option menu Sky, includes options for godrays, godrays intensity and godrays quality.
+*Fast godrays cause a low performance hit while fancy godrays cause a high performance hit.
+- Added debug option draw bumpmap normals.
+- Fixed and improved Bumpmapping, it's now fully working.
+- Fixed a bug with the horizon being visible underwater.
+- Fixed an issue with the sky being reflective at certain times.
+- Minor code optimizations and the sky bug being fixed results in another performance boost!
+- Removed the [redone] tag, should be clear by now that this is the rewritten version.
+ 
+Enhanced Default v1.052:
+- Fixed tallgrass / doubleplants again, my previous fix broke in the latest optifine preview 6.
+ 
+Enhanced default v1.051:
+- Adjusted lighting to prevent blocks from being overblown by light, like sand.
+- Added ingame option lighting strength to the shadows screen.
+- Added bumpmapping support, WIP, causes some lighting issues.
+- Fixed tallgrass / doubleplants from waving out of sync in 1.13+ (top and bottom half)
+- Fixed underwater fog!
+- Now works with 1.12.2 and below. 1.13+ requires optifine E3 pre4 or newer.
+ 
+Enhanced Default v1.04:
+- Added support for 1.13/1.13.1, use v1.031 for 1.12.2 and below.
+- Minor code changes/updates
+Currently broken: Underwater fog
+ 
+Enhanced Default v1.031:
+- Added ingame option Fog
+ 
+Enhanced Default v1.03:
+- More code cleanup and optimization, should increase performance by 10-15%
+ 
+Enhanced Default v1.02:
+- Fixed an issue with normals, resulting in an overall performance increase of about 30%!
+- Code optimizations and cleanup, further increasing the overall performance
+- Added debugging options in misc, depthbuffer isn't really used but might be neat for some screenshots
+- Added block.properties support, allowing you to easily add waving and reflections support for new blocks (modded blocks)
+- Removed individual reflections options, they are now grouped together due to block id mapping using block.properties (see below for more on that one)
+- Reduced shadow acne
+ 
+Enhanced Default v1.01
+- Improved performance, I get about 15-20fps more compared to v1.0. Make sure to update your optifine version, otherwise you might not gain that much of a boost.
+- Fixed fog under/in lava. You might have to update your optifine version for this to work.
+- Added ingame option Reflections Quality. (fast|fancy, default: fast)
+ 
+Enhanced [redone] v1.0
+- Initial release of rewritten enhanced default, everything has been improved.</code></pre>
+  </div>
+</b>
           
         
       </div>
@@ -401,117 +966,103 @@
 
       
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Sildur">
-            
-              <p class="site-author-name" itemprop="name">Sildur</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
+        <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+            <div class="site-overview">
+              <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                
+                  <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Sildur">
+                
+                  <p class="site-author-name" itemprop="name">Sildur</p>
+                  <div class="site-description motion-element" itemprop="description"></div>
+              </div>
+    
               
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/Sildurs-shaders" title="GitHub &rarr; https://github.com/Sildurs-shaders" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
+    
               
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="/sildur@hotmail.de" title="E-Mail &rarr; sildur@hotmail.de"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
+    
               
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://twitter.com/SiIdur" title="Twitter &rarr; https://twitter.com/SiIdur" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
-                </span>
+    
               
-                <span class="links-of-author-item">
+                <div class="links-of-author motion-element">
                   
+                    <span class="links-of-author-item">
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="https://github.com/Sildurs-shaders" title="GitHub &rarr; https://github.com/Sildurs-shaders" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                    </span>
                   
-                    
+                    <span class="links-of-author-item">
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="/sildur@hotmail.de" title="E-Mail &rarr; sildur@hotmail.de"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                    </span>
                   
+                    <span class="links-of-author-item">
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="https://twitter.com/SiIdur" title="Twitter &rarr; https://twitter.com/SiIdur" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                    </span>
                   
-                    
+                    <span class="links-of-author-item">
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="https://www.facebook.com/Sildurs-shaders-293806507414908" title="FB Page &rarr; https://www.facebook.com/Sildurs-shaders-293806507414908" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+                    </span>
                   
-                  <a href="https://www.facebook.com/Sildurs-shaders-293806507414908" title="FB Page &rarr; https://www.facebook.com/Sildurs-shaders-293806507414908" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
-                </span>
-              
-                <span class="links-of-author-item">
+                    <span class="links-of-author-item">
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="https://www.youtube.com/channel/UCqryX1vmMSwjEBdqAELtnKA" title="YouTube &rarr; https://www.youtube.com/channel/UCqryX1vmMSwjEBdqAELtnKA" rel="noopener" target="_blank"><i class="fa fa-fw fa-youtube"></i>YouTube</a>
+                    </span>
                   
+                    <span class="links-of-author-item">
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="https://discord.gg/BM3G79T" title="Discord &rarr; https://discord.gg/BM3G79T" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>Discord</a>
+                    </span>
                   
-                    
+                    <span class="links-of-author-item">
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="https://www.planetminecraft.com/forums/minecraft/mods/1-7-10-1-14-sildur-s-shaders-pc--587590/" title="Forum &rarr; https://www.planetminecraft.com/forums/minecraft/mods/1-7-10-1-14-sildur-s-shaders-pc--587590/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>Forum</a>
+                    </span>
                   
-                  
-                    
-                  
-                  <a href="https://www.youtube.com/channel/UCqryX1vmMSwjEBdqAELtnKA" title="YouTube &rarr; https://www.youtube.com/channel/UCqryX1vmMSwjEBdqAELtnKA" rel="noopener" target="_blank"><i class="fa fa-fw fa-youtube"></i>YouTube</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://discord.gg/BM3G79T" title="Discord &rarr; https://discord.gg/BM3G79T" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>Discord</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://www.planetminecraft.com/forums/minecraft/mods/1-7-10-1-14-sildur-s-shaders-pc--587590/" title="Forum &rarr; https://www.planetminecraft.com/forums/minecraft/mods/1-7-10-1-14-sildur-s-shaders-pc--587590/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>Forum</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </div>
+                </div>
 
       
 
@@ -639,7 +1190,7 @@
 
   
   <script src="/js/scrollspy.js?v=7.1.1"></script>
-<script src="/js/post-details.js?v=7.1.1"></script>
+  <script src="/js/post-details.js?v=7.1.1"></script>
 
 
 
@@ -650,8 +1201,25 @@
 
 
   
-
-  
+  <script type="text/javascript">
+    $(document).ready(function(){
+			var hash = window.location.hash.substring(1);
+			if(hash == "vibrant"){
+        $("#vibrants").addClass("clactive").removeClass('clnon_active');
+        $("#enhanceds").addClass("clnon_active").removeClass('clactive');
+			}
+      if(hash == "enhanced"){
+        $("#enhanceds").addClass("clactive").removeClass('clnon_active');
+        $("#vibrants").addClass("clnon_active").removeClass('clactive');
+			}
+		});
+    var $els = $('.element');
+      $("a").on("click", function (e) {
+      var $target = $($(this).attr('href')).addClass("clactive").removeClass('clnon_active');
+      $els.not($target).addClass("clnon_active").removeClass('clactive');
+      e.preventDefault();
+    });
+</script>
 
   
 
