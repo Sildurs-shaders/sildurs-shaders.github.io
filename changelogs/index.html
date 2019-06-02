@@ -13,6 +13,26 @@
 }
 .clnon_active {
   display: none;
+}
+.cl {
+  position: relative;
+  display: initial;
+  padding: 2px 0;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: none;
+}
+.clon, .clon:hover {
+  color:#a7a7a7;
+}
+.clon:after, .cl:hover:after { 
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: #a7a7a7;
+  width: 100%;
+  height: 2px;
+  content: " ";
 }</style>
 
 
@@ -365,8 +385,8 @@
         
         <h1>Changelogs:</h1><b> 
 
-  <a href="#vibrants">Vibrant Shaders</a>
-  <a href="#enhanceds" style="margin-left: 15px;">Enhanced Default</a>
+  <a href="#vibrants" class="cl clon" id="vib">Vibrant Shaders</a>
+  <a href="#enhanceds" class="cl" id="enhance" style="margin-left: 15px;">Enhanced Default</a>
 
   
   <div id="vibrants" class="element clactive">
@@ -1205,19 +1225,31 @@ Enhanced [redone] v1.0
     $(document).ready(function(){
 			var hash = window.location.hash.substring(1);
 			if(hash == "vibrant"){
-        $("#vibrants").addClass("clactive").removeClass('clnon_active');
-        $("#enhanceds").addClass("clnon_active").removeClass('clactive');
+        $("#vibrants").addClass("clactive").removeClass("clnon_active");
+        $("#enhanceds").addClass("clnon_active").removeClass("clactive");
+        $("#vib").addClass("clon");
+        $("#enhance").removeClass("clon");
 			}
       if(hash == "enhanced"){
-        $("#enhanceds").addClass("clactive").removeClass('clnon_active');
-        $("#vibrants").addClass("clnon_active").removeClass('clactive');
+        $("#enhanceds").addClass("clactive").removeClass("clnon_active");
+        $("#vibrants").addClass("clnon_active").removeClass("clactive");
+        $("#enhance").addClass("clon");
+        $("#vib").removeClass("clon");
 			}
 		});
-    var $els = $('.element');
+    var $els = $(".element");
       $("a").on("click", function (e) {
-      var $target = $($(this).attr('href')).addClass("clactive").removeClass('clnon_active');
-      $els.not($target).addClass("clnon_active").removeClass('clactive');
+      var $target = $($(this).attr("href")).addClass("clactive").removeClass("clnon_active");
+      $els.not($target).addClass("clnon_active").removeClass("clactive");
       e.preventDefault();
+    })
+    $("#vib").on("click", function(){
+      $("#vib").addClass("clon");
+      $("#enhance").removeClass("clon"); 
+    })
+    $("#enhance").on("click", function(){
+      $("#enhance").addClass("clon");
+      $("#vib").removeClass("clon"); 
     });
 </script>
 
