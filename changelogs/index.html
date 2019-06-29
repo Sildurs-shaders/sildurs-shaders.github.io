@@ -889,7 +889,20 @@ Vibrant Pre7
 			padding-top: 0px;
 			padding-left: 0px;
 			margin-top: 0px;
-			margin-bottom: 0px;"><code class="changelog">Enhanced Default v1.071:
+			margin-bottom: 0px;"><code class="changelog">Enhanced Default v1.08:
+- Added support for MC 1.14.x (waving entities)
+- White plane bug is fixed in Optifine 1.14.3 F1 thanks to Sp614x.
+- Improved raytracing code for reflections, even fast reflections should be pretty accurate now. Let me know of any performance regressions!
+- Ported vibrant shaders tonemap to enhanced default. It slightly alters colors / color balance. Disable by default.
+- Added an ingame option to toggle tonemapping to the colors section.
+- Added an ingame option to adjust gamma of tonemapping to the colors section.
+- Fixed a bug that caused a composite error when celshading was enabled but reflections disabled.
+- Fixed broken handheld maps while using parallax mapping (probably fixed alot more)
+- Fixed flickering shadows at certain times, like tick 6000.
+- Improved emissive lighting code, emissive lighting should now be rendered just like vanilla mc.
+- Various code improvements, might cause a small performance/framerate increase!
+
+Enhanced Default v1.071:
 - Fixed various amd driver bugs, latest amd driver (19.2.3) should work again. Thanks to Tinyds for testing! (tested on a RX580)
  
 Enhanced Default v1.07:
