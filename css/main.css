@@ -2794,7 +2794,7 @@ ul.breadcrumb li+li:last-child {
   border-radius: 4px;
   background: #eee;
 }
-.links-of-author-item .fa {
+.links-of-author-item .fa, .links-of-author-item .fab {
   margin-right: 2px;
   font-size: 16px;
 }
