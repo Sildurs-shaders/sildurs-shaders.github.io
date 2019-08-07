@@ -3047,6 +3047,26 @@ pre code.changelog {
   display: block;
   color: #898889
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 2px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border: none !important;
+  margin: 0px !important;
+}
+.column img:hover {
+	opacity: 0.8;
+}
 details:hover > summary, details[open] > summary {
   color: #b3b2b2;
 }
