@@ -429,7 +429,7 @@ table {
   font-size: 14px;
 }
 table.downloads {
-  max-width: 526px;
+  max-width: 586px;
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 14px;
@@ -442,7 +442,6 @@ table.downloads > tbody th, table.downloads > tbody td {
   border: 0px;
   padding: 0px;
   padding-right: 20px;
-  right: 10px;
   font-weight: bold;
   color: #8a8a8a;
   line-height: 20px;
