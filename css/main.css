@@ -3053,11 +3053,11 @@ p,
   color: rgba(255,255,255,0.42);
 }
 pre {
-  background-color: #00000000;
+  background-color: rgba(0,0,0,0);
   white-space: pre-wrap;
 }
 pre code.changelog {
-  background-color: #2b2b2b26;
+  background-color: rgba(43, 43, 43, 0.15);
   border: 1px solid #9990;
   display: block;
   color: #898889
@@ -3081,6 +3081,52 @@ pre code.changelog {
 }
 .column img:hover {
 	opacity: 0.8;
+}
+p.accordion {
+  background-color: #232323;
+  color: #b3b2b2;
+	cursor: pointer;
+	padding: 5px 10px 5px 10px;
+	max-width: 800px;
+	text-align: left;
+	border: none;
+	outline: none;
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+p.accordion.active, p.accordion:hover {
+
+	background-color: #afafaf;
+	color: #444;
+}
+p.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+p.accordion.active:after {
+  content: "\2212"; 
+}
+div.panel {
+  opacity: 0;
+	padding: 0px 10px 0px 10px;
+	background-color: rgba(43, 43, 43, 0.15);
+  max-height: 0;
+  max-width: 800px;
+  overflow: hidden;
+	transition: 0.4s ease-out;
+	margin-bottom: 0px;
+}
+p.accordion, div.panel{
+  font-size: 14px;
+}
+div.panel.show {
+  opacity: 1;
+  padding: 10px;
+  max-height: 100%;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
 }
 details:hover > summary, details[open] > summary {
   color: #b3b2b2;
