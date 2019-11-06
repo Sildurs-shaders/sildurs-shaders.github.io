@@ -384,11 +384,11 @@
         
         <h1>Changelogs:</h1><b> 
 
-  <a href="#vibrants" class="cl clon" id="vib">Vibrant Shaders</a>
-  <a href="#enhanceds" class="cl" id="enhance" style="margin-left: 15px;">Enhanced Default</a>
+  <a href="#vibrant" class="cl clon" id="vib">Vibrant Shaders</a>
+  <a href="#enhanced" class="cl" id="enhance" style="margin-left: 15px;">Enhanced Default</a>
 
   
-  <div id="vibrants" class="element clactive">
+  <div id="vibrantc" class="element clactive">
       <pre style="
 			padding-bottom: 0px;
 			padding-right: 0px;
@@ -915,7 +915,7 @@ Vibrant Pre7
 - Ssao currently broken</code>
 		</pre>
   </div>
-  <div id="enhanceds" class="element clnon_active">
+  <div id="enhancedc" class="element clnon_active">
       <pre style="
 			padding-bottom: 0px;
 			padding-right: 0px;
@@ -1314,22 +1314,16 @@ Enhanced [redone] v1.0
   <script type="text/javascript">
     $(document).ready(function(){
 			var hash = window.location.hash.substring(1);
-			if(hash == "vibrant"){
-        $("#vibrants").addClass("clactive").removeClass("clnon_active");
-        $("#enhanceds").addClass("clnon_active").removeClass("clactive");
-        $("#vib").addClass("clon");
-        $("#enhance").removeClass("clon");
-			}
-      if(hash == "enhanced"){
-        $("#enhanceds").addClass("clactive").removeClass("clnon_active");
-        $("#vibrants").addClass("clnon_active").removeClass("clactive");
+			if (hash == "enhanced"){
+        $("#enhancedc").addClass("clactive").removeClass("clnon_active");
+        $("#vibrantc").addClass("clnon_active").removeClass("clactive");
         $("#enhance").addClass("clon");
         $("#vib").removeClass("clon");
 			}
 		});
     var $els = $(".element");
       $("a").on("click", function (e) {
-      var $target = $($(this).attr("href")).addClass("clactive").removeClass("clnon_active");
+      var $target = $($(this).attr("href") + "c").addClass("clactive").removeClass("clnon_active");
       $els.not($target).addClass("clnon_active").removeClass("clactive");
       e.preventDefault();
     })
