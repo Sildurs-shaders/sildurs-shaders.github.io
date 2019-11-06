@@ -3120,6 +3120,7 @@ div.panel {
 	margin-bottom: 0px;
 }
 @media (max-width: 1160px) {
+<<<<<<< HEAD
   div.panel {
     overflow: auto;
     overflow: -moz-scrollbars-none;
@@ -3128,6 +3129,11 @@ div.panel {
   div.panel::-webkit-scrollbar { 
     width: 0 !important
   }
+=======
+	div.panel {
+		overflow: auto;
+	}
+>>>>>>> 9520e3c5eaa3cf37b141f5f78a0cba47a66034cc
 }
 p.accordion, div.panel{
   font-size: 14px;
