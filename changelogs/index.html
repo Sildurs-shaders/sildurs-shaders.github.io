@@ -922,7 +922,20 @@ Vibrant Pre7
 			padding-top: 0px;
 			padding-left: 0px;
 			margin-top: 0px;
-			margin-bottom: 0px;"><code class="changelog">Enhanced Default v1.09:
+			margin-bottom: 0px;"><code class="changelog">Enhanced Default v1.10:
+- Added an antialising section to the shader options.
+- Added TAA (Temporal anti-aliasing), disabled by default. (I recommend enabling it if your system can handle the extra load)
+- Added an ingame option to toggle the quality of TAA (Fast|Fancy)
+- Added adaptive sharpening, enabled by default, but is only active if TAA is enabled.
+- Added an ingame option to adjust the sharpening strength.
+- Updated nether shaders, everything supported by the overworld is now supported in nether aswell, (reflections, taa, parallax mapping etc)
+- Fixed ice and stained glass being affected by refractions. (water waves)
+- Fixed lectern rendering, no more black bars on it's sides.
+- Various code improvements.
+Shoutout to Chocapic13, TAA and adaptive sharpening implementations are based of his code!
+https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1293898-1-14-chocapic13s-shaders
+
+Enhanced Default v1.09:
 - Ported water ripples changes from vibrant shaders to enhanced default (doesn't include caustics)
 - Improved water reflections and removed water reflections quality option.
 - Improved transition between reflections and water.
