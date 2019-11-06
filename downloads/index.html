@@ -966,9 +966,9 @@
 	document.addEventListener("DOMContentLoaded", function(event) { 
 	var hash = window.location.hash.substring(1);
 	var acc = document.getElementsByClassName("accordion");
-	var accanch = document.getElementById(hash);
 	var panel = document.getElementsByClassName('panel');
 	for (var i = 0; i < acc.length; i++) {
+		acc[i].id = acc[i].innerText.replace(".", "-").replace(/v|\s(.*)/g, "");
 		acc[i].onclick = function() {
 			var setClasses = !this.classList.contains('active');
 			setClass(acc, 'active', 'remove');
@@ -988,6 +988,7 @@
 			els[i].classList[fnName](className);
 		}
 	}
+	var accanch = document.getElementById(hash);
 	if (accanch) {
 		accanch.classList.add("active");
 		accanch.nextElementSibling.classList.add("show");

@@ -3119,6 +3119,16 @@ div.panel {
 	transition: 0.4s ease-out;
 	margin-bottom: 0px;
 }
+@media (max-width: 1160px) {
+  div.panel {
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+  }
+  div.panel::-webkit-scrollbar { 
+    width: 0 !important
+  }
+}
 p.accordion, div.panel{
   font-size: 14px;
 }
