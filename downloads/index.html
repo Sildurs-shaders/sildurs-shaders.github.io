@@ -968,7 +968,9 @@
 	var acc = document.getElementsByClassName("accordion");
 	var panel = document.getElementsByClassName('panel');
 	for (var i = 0; i < acc.length; i++) {
-		acc[i].id = acc[i].innerText.replace(".", "-").replace(/v|\s(.*)/g, "");
+		if(!acc[i].id) {
+			acc[i].id = acc[i].innerText.replace(".", "-").replace(/v|\s(.*)/g, "");
+		}
 		acc[i].onclick = function() {
 			var setClasses = !this.classList.contains('active');
 			setClass(acc, 'active', 'remove');
