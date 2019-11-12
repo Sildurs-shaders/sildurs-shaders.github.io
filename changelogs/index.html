@@ -395,7 +395,24 @@
 			padding-top: 0px;
 			padding-left: 0px;
 			margin-top: 0px;
-			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.24:
+			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.25:
+- Added an antialising section to the shader options.
+- Added TAA (Temporal anti-aliasing)
+- Added an ingame option to toggle the quality of TAA (Fast|Fancy)
+- Added adaptive sharpening (causes some issues with emissive blocks, disabled by default)
+- Added an ingame option to adjust the sharpening strength.
+- Added an ingame option to toggle the blue underwater color tint to the fog section.
+- Reworked and improved custom textured skybox support, now also supports daytime.
+- Changed option default skybox, now auto disables shader sun and moon, since using default skybox enables default/textured sun and moon.
+- Added option skybox blend factor, allows you to tweak the color amount of the shader sky mixing with the default skybox texture.
+- Removed option shader moon. If no resourcepack is present default skybox will only enable default sun and moon texture and auto disable custom moon and sun.
+- Added support for default sun texture.
+- Default stars are no longer supported, use a resourcepack with a skybox texture instead or just use the shader stars.
+- Reworked clouds dithering / filter.
+- Updated nether shaders to support some new features, will probably be rewritten in future updates.
+- Minor water adjustements.
+
+Vibrant shaders v1.24:
 - Added an ingame option to adjust the wave size of caustics and refractions.
 - Adjusted caustics and refraction wave size, waves are a bit smaller now.
 - Improved caustics rendering.
