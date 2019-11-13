@@ -429,7 +429,7 @@ table {
   font-size: 14px;
 }
 table.downloads {
-  max-width: 586px;
+  max-width: 612px;
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 14px;
@@ -446,8 +446,14 @@ table.downloads > tbody th, table.downloads > tbody td {
   color: #8a8a8a;
   line-height: 20px;
 }
+table.downloads tr {
+  height: 20px;
+}
 table.downloads > tbody th:last-child, table.downloads > tbody td:last-child {
   padding-right: 0px;
+}
+table.downloads tr > td:first-child {
+  width: 454px;
 }
 caption,
 th,
