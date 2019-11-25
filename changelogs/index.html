@@ -395,7 +395,46 @@
 			padding-top: 0px;
 			padding-left: 0px;
 			margin-top: 0px;
-			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.25:
+			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.26:
+- Improved lighting during day-night transition. (sunrise, tick 23000 and sunset 12700)
+- Added support for morning Fog and and option to toggle it. (Increased fog density during sunrise, disabled by default)
+- Updated 2D cloud visuals.
+- Updated clouds option, now supports: 2D Clouds, Volumetric Clouds and 2D + Volumetric clouds.
+- Reworked shadows rendering.
+- Improved shadows quality and distance rendering.
+- Added an ingame option to adjust the shadowfilter quality.
+- Added support for variable penumbra shadows. (The farther shadows are away from their source the more soft they become)
+- Improved lighting support if shadows are disabled.
+- Improved adaptive sharpening.
+- Improved volumetric clouds visuals if TAA is enabled.
+- Improved overall performance by reducing clouds sample quality since TAA filters it now. If you disable TAA increase clouds and reflections quality.
+- Improved shadows quality if TAA is enabled.
+- Improved volumetric lighting quality if TAA is enabled.
+- Reworked and improved caustics. (Still work in progress)
+- Fixed flickering caused by ambient occlusion.
+- Fixed and improved water rendering during night time and in caves.
+- Fixed lightning strikes / thunder rendering.
+- Updated option shadows render distance, expanded it's value range and turned it into a slider.
+- Updated option shadows resolution, expanded it's value range. (previous extreme is now called insane)
+- Updated option cloud quality, expanded it's value range and turned it into slider.
+- Updated option cloud reflections quality, expanded it's value range and turned it into slider.
+- Updated option cloud height and turned it into a slider.
+- Updated option skybox blend factor and turned it into a slider.
+- Updated option Sun/Moon angle and turned it into a slider.
+- Updated option brightness and contrast, both are sliders now.
+- Updated option overworld fog density, expanded it's value range and turned it into slider.
+- Updated option underwater fog density, expanded it's value range and turned it into slider.
+- Updated option parallax mapping render distance, expanded it's value range and turned it into slider.
+- Updated option parallax mapping depth and turned it into a slider.
+- Updated option minlight, now called Minimum Light, expanded it's value range and turned it into slider.
+- Updated option adaptive sharpening amount and turned it into a slider.
+- Updated option waves amplitude and turned it into a slider.
+- Updated option wave size and turned it into a slider.
+- Updated option caustics strength expanded it's value range and turned it into slider.
+- Updated option rain noise and turned it into a slider.
+- Updated option Cloudsblur, now called Sky blur.
+
+Vibrant shaders v1.25:
 - Added an antialiasing section to the shader options.
 - Added TAA (Temporal anti-aliasing)
 - Added an ingame option to toggle the quality of TAA (Fast|Fancy)
