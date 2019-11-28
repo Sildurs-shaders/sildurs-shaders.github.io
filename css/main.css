@@ -3088,7 +3088,7 @@ pre code.changelog {
 .column img:hover {
 	opacity: 0.8;
 }
-p.accordion {
+a.accordion {
   background-color: #232323;
   color: #b3b2b2;
 	cursor: pointer;
@@ -3099,20 +3099,21 @@ p.accordion {
 	outline: none;
   margin-bottom: 0px;
   margin-top: 2px;
+  display:block;
 }
-p.accordion.active, p.accordion:hover {
+a.accordion.active, a.accordion:hover {
 
 	background-color: #afafaf;
 	color: #444;
 }
-p.accordion:after {
+a.accordion:after {
   content: '\002B';
   color: #777;
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
-p.accordion.active:after {
+a.accordion.active:after {
   content: "\2212"; 
 }
 div.panel {
@@ -3135,7 +3136,7 @@ div.panel {
     width: 0 !important
   }
 }
-p.accordion, div.panel{
+a.accordion, div.panel{
   font-size: 14px;
 }
 div.panel.show {
@@ -3143,6 +3144,7 @@ div.panel.show {
   padding: 10px;
   max-height: 100%;
   transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  -moz-transition: 0s;
 }
 details:hover > summary, details[open] > summary {
   color: #b3b2b2;
