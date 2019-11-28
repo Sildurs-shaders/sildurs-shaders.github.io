@@ -1134,7 +1134,7 @@
 		if(!acc[i].id) {
 			acc[i].id = acc[i].innerText.replace(".", "-").replace(/v|\s(.*)/g, "");
 		}
-		acc[i].setAttribute("href", "#" + acc[i].innerText.replace(".", "-").replace(/v|\s(.*)/g, ""))
+		acc[i].setAttribute("href", "#" + acc[i].id)
 		acc[i].onclick = function() {
 			var setClasses = !this.classList.contains('active');
 			setClass(acc, 'active', 'remove');
