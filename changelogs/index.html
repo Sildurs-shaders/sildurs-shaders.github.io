@@ -395,7 +395,15 @@
 			padding-top: 0px;
 			padding-left: 0px;
 			margin-top: 0px;
-			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.26:
+			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.261:
+- Improved performance by about 10-15% (various code optimizations)
+- Updated and improved nether shaders.
+- Added ingame option Shadowmap Quality. It's streching the shadowmap, lower values increase shadow quality. Higher values reduce shadow quality but also increase performance.
+- Fixed various compiling errors on AMD and Intel gpus.
+- Fixed and restored support for older minecraft versions. (1.7.10 - 1.14.4 fully supported again, 1.8.9 and newer REQUIRE optifine preview verions) 
+Note: Due to driver issues penumbra shadows only work on nvidia graphic cards running windows. It will be force disabled on other graphic cards.
+
+Vibrant shaders v1.26:
 - Improved lighting during day-night transition. (sunrise, tick 23000 and sunset 12700)
 - Added support for morning Fog and and option to toggle it. (Increased fog density during sunrise, disabled by default)
 - Updated 2D cloud visuals.
