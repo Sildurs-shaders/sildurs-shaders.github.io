@@ -3062,6 +3062,38 @@ pre {
   background-color: rgba(0,0,0,0);
   white-space: pre-wrap;
 }
+.clactive {
+  display: block;
+}
+
+.clnon_active {
+  display: none;
+}
+
+.cl {
+  position: relative;
+  display: initial;
+  padding: 2px 0;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: none;
+}
+
+.clon,
+.clon:hover {
+  color: #a7a7a7;
+}
+
+.clon:after,
+.cl:hover:after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: #a7a7a7;
+  width: 100%;
+  height: 2px;
+  content: " ";
+}
 pre code.changelog {
   background-color: rgba(43, 43, 43, 0.15);
   border: 1px solid #9990;
