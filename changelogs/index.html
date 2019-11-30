@@ -229,47 +229,47 @@
 - Updated and improved nether shaders.
 - Added ingame option Shadowmap Quality. It's streching the shadowmap, lower values increase shadow quality. Higher values reduce shadow quality but also increase performance.
 - Fixed various compiling errors on AMD and Intel gpus.
-- Fixed and restored support for older minecraft versions. (1.7.10 - 1.14.4 fully supported again, 1.8.9 and newer REQUIRE optifine preview verions) 
-Note: Due to driver issues penumbra shadows only work on nvidia graphic cards running windows. It will be force disabled on other graphic cards.
+- Fixed and restored support for older minecraft versions. (1.7.10 - 1.14.4 fully supported again, 1.8.9 and newer REQUIRE optifine preview versions) 
+Note: Due to driver issues penumbra shadows only work on NVIDIA graphics cards running windows. It will be force disabled on other graphics cards.
 
 Vibrant shaders v1.26:
-- Improved lighting during day-night transition. (sunrise, tick 23000 and sunset 12700)
-- Added support for morning Fog and and option to toggle it. (Increased fog density during sunrise, disabled by default)
+- Improved lighting during day-night transition. (Sunrise, tick 23000 and sunset 12700)
+- Added support for Morning Fog and and option to toggle it. (Increased fog density during sunrise, disabled by default)
 - Updated 2D cloud visuals.
 - Updated clouds option, now supports: 2D Clouds, Volumetric Clouds and 2D + Volumetric clouds.
-- Reworked shadows rendering.
-- Improved shadows quality and distance rendering.
-- Added an ingame option to adjust the shadowfilter quality.
+- Reworked shadow rendering.
+- Improved shadow quality and distance rendering.
+- Added an ingame option to adjust the shadow-filter quality.
 - Added support for variable penumbra shadows. (The farther shadows are away from their source the more soft they become)
 - Improved lighting support if shadows are disabled.
 - Improved adaptive sharpening.
 - Improved volumetric clouds visuals if TAA is enabled.
 - Improved overall performance by reducing clouds sample quality since TAA filters it now. If you disable TAA increase clouds and reflections quality.
-- Improved shadows quality if TAA is enabled.
+- Improved shadow quality if TAA is enabled.
 - Improved volumetric lighting quality if TAA is enabled.
 - Reworked and improved caustics. (Still work in progress)
 - Fixed flickering caused by ambient occlusion.
 - Fixed and improved water rendering during night time and in caves.
 - Fixed lightning strikes / thunder rendering.
-- Updated option shadows render distance, expanded it's value range and turned it into a slider.
-- Updated option shadows resolution, expanded it's value range. (previous extreme is now called insane)
-- Updated option cloud quality, expanded it's value range and turned it into slider.
-- Updated option cloud reflections quality, expanded it's value range and turned it into slider.
+- Updated option shadows render distance, expanded its value range and turned it into a slider.
+- Updated option shadows resolution, expanded its value range. (Previous extreme is now called insane)
+- Updated option cloud quality, expanded its value range and turned it into a slider.
+- Updated option cloud reflections quality, expanded its value range and turned it into a slider.
 - Updated option cloud height and turned it into a slider.
 - Updated option skybox blend factor and turned it into a slider.
 - Updated option Sun/Moon angle and turned it into a slider.
 - Updated option brightness and contrast, both are sliders now.
-- Updated option overworld fog density, expanded it's value range and turned it into slider.
-- Updated option underwater fog density, expanded it's value range and turned it into slider.
-- Updated option parallax mapping render distance, expanded it's value range and turned it into slider.
+- Updated option overworld fog density, expanded its value range and turned it into a slider.
+- Updated option underwater fog density, expanded its value range and turned it into a slider.
+- Updated option parallax mapping render distance, expanded its value range and turned it into a slider.
 - Updated option parallax mapping depth and turned it into a slider.
-- Updated option minlight, now called Minimum Light, expanded it's value range and turned it into slider.
+- Updated option minlight; now called Minimum Light, expanded its value range and turned it into a slider.
 - Updated option adaptive sharpening amount and turned it into a slider.
 - Updated option waves amplitude and turned it into a slider.
 - Updated option wave size and turned it into a slider.
-- Updated option caustics strength expanded it's value range and turned it into slider.
+- Updated option caustics strength, expanded its value range and turned it into a slider.
 - Updated option rain noise and turned it into a slider.
-- Updated option Cloudsblur, now called Sky blur.
+- Updated option Cloudsblur; now called Sky blur.
 
 Vibrant shaders v1.25:
 - Added an antialiasing section to the shader options.
@@ -813,14 +813,14 @@ Vibrant Pre7
 			padding-left: 0px;
 			margin-top: 0px;
 			margin-bottom: 0px;"><code class="changelog">Enhanced Default v1.10:
-- Added an antialiasing section to the shader options.
+- Added an anti-aliasing section to the shader options.
 - Added TAA (Temporal anti-aliasing), disabled by default. (I recommend enabling it if your system can handle the extra load)
-- Added an ingame option to toggle the quality of TAA (Fast|Fancy)
+- Added an ingame option to toggle the quality of TAA. (Fast|Fancy)
 - Added adaptive sharpening, enabled by default, but is only active if TAA is enabled.
 - Added an ingame option to adjust the sharpening strength.
-- Updated nether shaders, everything supported by the overworld is now supported in nether aswell, (reflections, taa, parallax mapping etc)
-- Fixed ice and stained glass being affected by refractions. (water waves)
-- Fixed lectern rendering, no more black bars on it's sides.
+- Updated nether shaders, everything supported by the overworld is now supported in nether aswell. (Reflections, TAA, parallax mapping, etc.)
+- Fixed ice and stained glass being affected by refractions. (Water waves)
+- Fixed lectern rendering, no more black bars on its sides.
 - Various code improvements.
 Shoutout to Chocapic13, TAA and adaptive sharpening implementations are based of his code!
 https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1293898-1-14-chocapic13s-shaders
