@@ -229,7 +229,29 @@
 			padding-top: 0px;
 			padding-left: 0px;
 			margin-top: 0px;
-			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.262:
+			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.27:
+- Support for MC 1.15+
+- Added support for reflective honeyblocks. (just like slimeblocks)
+- Added Raytraced shadows and and option to toggle it. (requires shadows to be enabled)
+- Added End dimension shaders!
+- Moved option "Water texture" to the colors -> water section.
+- Added option "watertexture blend factor" to the colors -> water section, you can now adjust the default water texture strength.
+- Reworked nether shaders based on end shaders, now supporting reflections etc.
+- Nether brightness now scales with minecrafts default brightness slider in video settings.
+- End brightness now scales with minecrafts default brightness slider in video settings.
+- Added ingame option Far shadowplane quality (basicly shadowmap quality)
+- Added ingame option Near shadowplane quality, should be adjusted if far shadowplane causes shadow glitches.
+- Fixed various shadow rendering issues, like weird dots following the player at certain times.
+- Fixed and updated enderman eyes, they glow purple now.
+- Fixed weird screen mirroring issues. (like a reflection of a torch infront of your face/camera)
+- Fixed/Improved parallax mapping, thanks to fayer3 on shaderslab discord.
+Known issues:
+- Shaders might not load correctly if loaded in a dimension, it's an optifine bug. Swapping dimensions should make it load correctly.
+- Far away endereyes might flicker a bit, caused by TAA.
+Credits to Chocapic13, raytraced shadows is based of his implementation.
+https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1293898-1-14-chocapic13s-shaders
+
+Vibrant shaders v1.262:
 - Fixed enchanted items if TAA is enabled.
 
 Vibrant shaders v1.261:
