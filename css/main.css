@@ -5,7 +5,6 @@ html {
 }
 body {
   margin: 0;
-  cursor: progress;
 }
 main {
   display: block;
@@ -2499,11 +2498,6 @@ ul.breadcrumb li+li:last-child {
   min-height: 700px;
   box-shadow: 0 2px 2px 0 #000, 0 3px 1px -2px #000, 0 1px 5px 0 #000;
   border-radius: initial;
-  transform: rotatez(0.3deg);
-  -ms-transform: rotatez(0.3deg);
-  -moz-transform: rotatez(0.3deg);
-  -webkit-transform: rotatez(0.3deg);
-  -o-transform: rotatez(0.3deg);
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
@@ -3054,7 +3048,6 @@ ul.breadcrumb li+li:last-child {
 a,
 span.exturl {
   color: #315aa7;
-  cursor: wait;
 }
 h1 {
   color: rgba(255,255,255,0.478);
@@ -3144,7 +3137,6 @@ a.accordion.active, a.accordion:hover {
 
 	background-color: #afafaf;
   color: #444;
-  cursor: wait;
 }
 a.accordion:after {
   content: '\002B';
