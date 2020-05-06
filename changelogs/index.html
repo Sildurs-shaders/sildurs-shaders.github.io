@@ -842,7 +842,18 @@ Vibrant Pre7
 			padding-top: 0px;
 			padding-left: 0px;
 			margin-top: 0px;
-			margin-bottom: 0px;"><code class="changelog">Enhanced Default v1.10:
+			margin-bottom: 0px;"><code class="changelog">Enhanced Default v1.11:
+- Support for MC 1.15+
+- Added two profiles / setting presets to the shader options: Fast and Fancy. You can of course still tweak everything manually.
+- Added support for reflective honeyblocks. (just like slimeblocks)
+- Added a watercolor fallback for MC version 1.12.2 and below if water texture is turned off. (water now has a custom color in older MC versions so its no longer grey)
+- Added support for TAA(antialiasing) in MC version 1.7.10
+- Added support for sky reflections and an option to toggle it. Blends skycolor and watercolor together.
+- Fixed bump and parallax mapping for emissive blocks.
+- Improved parallax mapping thanks to fayer3@shaderslab discord.
+- Various code improvements.
+
+Enhanced Default v1.10:
 - Added an anti-aliasing section to the shader options.
 - Added TAA (Temporal anti-aliasing), disabled by default. (I recommend enabling it if your system can handle the extra load)
 - Added an ingame option to toggle the quality of TAA. (Fast|Fancy)
