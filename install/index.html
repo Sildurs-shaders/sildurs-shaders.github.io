@@ -128,7 +128,12 @@
             }
         </style>
     </noscript>
-
+    <style>
+        .installfocus {
+            border-style: dashed;
+            border-color: yellow;
+        }
+    </style>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -236,8 +241,17 @@
                                             <br> 6. Download my shaderpacks and place them in the newly opened window.
                                             <br> 7. Select my shaderpack from the list ingame and enjoy your new visuals!
                                             <br>
+                                            <br>
+
                                         </p>
-                                        <p>
+                                        <p id="fabulous">
+                                            <b>Fabulous Shaders for Minecarft version 1.16+</b>
+                                            <br> 1. Download the resourcepack and move it into your resourcepack folder.
+                                            <br> 2. Launch Minecraft and select the resourcepack from the list.
+                                            <br> 3. Go to video settings - options and set graphics to fabulous.
+                                            <br> 4. That's it!
+                                            <br> If you want to tweak effects to your liking, go into the resourcepack \assets\minecraft\shaders\program" and edit sildurs_shaders.fsh with something like notepadd++.
+                                            Example: //#define Bloom means Bloom is disabled, removing the two slashes - #Bloom enables it.
                                         </p>
                                     </body>
 
@@ -402,6 +416,14 @@
     <script src="/js/post-details.js?v=7.1.1"></script>
 
     <script src="/js/next-boot.js?v=7.1.1"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var hash = window.location.hash.substring(1);
+            if (hash == "fabulous") {
+                $("#fabulous").addClass("installfocus");
+            }
+
+        });</script>
 
 </body>
 

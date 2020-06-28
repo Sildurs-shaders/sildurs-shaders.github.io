@@ -221,6 +221,7 @@
 
   <a href="#vibrant" class="cl clon" id="vib">Vibrant Shaders</a>
   <a href="#enhanced" class="cl" id="enhance" style="margin-left: 15px;">Enhanced Default</a>
+  <a href="#fabulous" class="cl" id="fabulous" style="margin-left: 15px;">Fabulous Shaders</a>
 
   <div id="vibrantc" class="element clactive">
       <pre style="
@@ -958,6 +959,20 @@ Enhanced Default v1.01
 Enhanced [redone] v1.0
 - Initial release of rewritten enhanced default, everything has been improved.</code></pre>
   </div>
+  <div id="fabulousc" class="element clnon_active">
+    <pre style="
+          padding-bottom: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-left: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;"><code class="changelog">Sildur's fabulous shaders v1.0:
+- Inital release, features: Antialiasing (FXAA), Bloom, depth of field, cel shading, tonemapping (colors).
+- Also supports Bumpy and Blobs from the old secret shader settings. 
+Everything can be tweaked in "Sildur's fabulous shaders v1.0\assets\minecraft\shaders\program" by editing sildurs_shaders.fsh with an editor like notepad++
+//#define Bloom means Bloom is disabled, removing the two slashes -> #Bloom enables it.
+Resourcepacks can be reloaded ingame by pressing F3+T</code></pre>
+</div>
 </b>
 
                                 </div>
@@ -1130,6 +1145,12 @@ Enhanced [redone] v1.0
                     $("#enhance").addClass("clon");
                     $("#vib").removeClass("clon");
                 }
+                if (hash == "fabulous") {
+                    $("#fabulousc").addClass("clactive").removeClass("clnon_active");
+                    $("#vibrantc").addClass("clnon_active").removeClass("clactive");
+                    $("#fabulous").addClass("clon");
+                    $("#vib").removeClass("clon");
+                }
             });
             var $els = $(".element");
             $("a").on("click", function(e) {
@@ -1140,9 +1161,16 @@ Enhanced [redone] v1.0
             $("#vib").on("click", function() {
                 $("#vib").addClass("clon");
                 $("#enhance").removeClass("clon");
+                $("#fabulous").removeClass("clon");
             })
             $("#enhance").on("click", function() {
                 $("#enhance").addClass("clon");
+                $("#vib").removeClass("clon");
+                $("#fabulous").removeClass("clon");
+            });
+            $("#fabulous").on("click", function() {
+                $("#fabulous").addClass("clon");
+                $("#enhance").removeClass("clon");
                 $("#vib").removeClass("clon");
             });
 	</script>
