@@ -3066,10 +3066,21 @@ pre {
   display: block;
 }
 
-.clnon_active {
+.clnon-active {
   display: none;
 }
-
+div.cl-element {
+  margin-top: 10px;
+  margin-bottom: 34px;
+}
+div.cl-element > pre {
+  padding-bottom: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
 .cl {
   position: relative;
   display: initial;

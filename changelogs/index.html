@@ -123,6 +123,13 @@
             .use-motion .logo-line-after i {
                 right: initial;
             }
+            .clnon-active {
+              display: block;
+            }
+            div.cl-element > pre {
+                border-style: dotted;
+                border-color: rgba(85,85,85,0.2);
+            }
         </style>
     </noscript>
 
@@ -219,18 +226,12 @@
 
                                     <h1>Changelogs:</h1><b> 
 
-  <a href="#vibrant" class="cl clon" id="vib">Vibrant Shaders</a>
-  <a href="#enhanced" class="cl" id="enhance" style="margin-left: 15px;">Enhanced Default</a>
-  <a href="#fabulous" class="cl" id="fabulous" style="margin-left: 15px;">Fabulous Shaders</a>
+  <a href="#vibrant" class="cl">Vibrant Shaders</a>
+  <a href="#enhanced" class="cl" style="margin-left: 15px;">Enhanced Default</a>
+  <a href="#fabulous" class="cl" style="margin-left: 15px;">Fabulous Shaders</a>
 
-  <div id="vibrantc" class="element clactive">
-      <pre style="
-			padding-bottom: 0px;
-			padding-right: 0px;
-			padding-top: 0px;
-			padding-left: 0px;
-			margin-top: 0px;
-			margin-bottom: 0px;"><code class="changelog">Vibrant shaders v1.27:
+  <div id="vibrant" class="cl-element clactive">
+      <pre><code class="changelog">Vibrant shaders v1.27:
 - Support for MC 1.15+
 - Added support for reflective honeyblocks. (just like slimeblocks)
 - Added Raytraced shadows and and option to toggle it. (requires shadows to be enabled)
@@ -833,17 +834,10 @@ Vibrant Pre7
 - Merged with chocapics rain flares
 - Added specular mapping back (broken, fixed in 7.1)
 - Reworked water shader again
-- Ssao currently broken</code>
-		</pre>
+- Ssao currently broken</code></pre>
   </div>
-  <div id="enhancedc" class="element clnon_active">
-      <pre style="
-			padding-bottom: 0px;
-			padding-right: 0px;
-			padding-top: 0px;
-			padding-left: 0px;
-			margin-top: 0px;
-			margin-bottom: 0px;"><code class="changelog">Enhanced Default v1.11:
+  <div id="enhanced" class="cl-element clnon-active">
+      <pre><code class="changelog">Enhanced Default v1.11:
 - Support for MC 1.15+
 - Added two profiles / setting presets to the shader options: Fast and Fancy. You can of course still tweak everything manually.
 - Added support for reflective honeyblocks. (just like slimeblocks)
@@ -959,14 +953,8 @@ Enhanced Default v1.01
 Enhanced [redone] v1.0
 - Initial release of rewritten enhanced default, everything has been improved.</code></pre>
   </div>
-  <div id="fabulousc" class="element clnon_active">
-    <pre style="
-          padding-bottom: 0px;
-          padding-right: 0px;
-          padding-top: 0px;
-          padding-left: 0px;
-          margin-top: 0px;
-          margin-bottom: 0px;"><code class="changelog">Sildur's fabulous shaders v1.0:
+  <div id="fabulous" class="cl-element clnon-active">
+    <pre><code class="changelog">Sildur's fabulous shaders v1.0:
 - Inital release, features: Antialiasing (FXAA), Bloom, depth of field, cel shading, tonemapping (colors).
 - Also supports Bumpy and Blobs from the old secret shader settings. 
 Everything can be tweaked in "Sildur's fabulous shaders v1.0\assets\minecraft\shaders\program" by editing sildurs_shaders.fsh with an editor like notepad++
@@ -1137,41 +1125,32 @@ Resourcepacks can be reloaded ingame by pressing F3+T</code></pre>
         <script src="/js/next-boot.js?v=7.1.1"></script>
 
         <script type="text/javascript">
+            var $els = $(".cl-element");
             $(document).ready(function() {
+                $(".cl").first().addClass("clon");
                 var hash = window.location.hash.substring(1);
-                if (hash == "enhanced") {
-                    $("#enhancedc").addClass("clactive").removeClass("clnon_active");
-                    $("#vibrantc").addClass("clnon_active").removeClass("clactive");
-                    $("#enhance").addClass("clon");
-                    $("#vib").removeClass("clon");
-                }
-                if (hash == "fabulous") {
-                    $("#fabulousc").addClass("clactive").removeClass("clnon_active");
-                    $("#vibrantc").addClass("clnon_active").removeClass("clactive");
-                    $("#fabulous").addClass("clon");
-                    $("#vib").removeClass("clon");
-                }
-            });
-            var $els = $(".element");
-            $("a").on("click", function(e) {
-                var $target = $($(this).attr("href") + "c").addClass("clactive").removeClass("clnon_active");
-                $els.not($target).addClass("clnon_active").removeClass("clactive");
-                e.preventDefault();
-            })
-            $("#vib").on("click", function() {
-                $("#vib").addClass("clon");
-                $("#enhance").removeClass("clon");
-                $("#fabulous").removeClass("clon");
-            })
-            $("#enhance").on("click", function() {
-                $("#enhance").addClass("clon");
-                $("#vib").removeClass("clon");
-                $("#fabulous").removeClass("clon");
-            });
-            $("#fabulous").on("click", function() {
-                $("#fabulous").addClass("clon");
-                $("#enhance").removeClass("clon");
-                $("#vib").removeClass("clon");
+                var $cl = $("a[href='#"+hash+"'].cl")
+                $(".cl-element").each (function(index, element) {
+                    $(this).attr("id", $(this).attr("id")+"i");
+                });
+                if ($cl.length) {
+                    $els.first().addClass("clnon-active").removeClass("clactive");
+                    $("#"+hash+"i").addClass("clactive").removeClass("clnon-active");
+                    $(".cl").first().removeClass("clon");
+                    $cl.addClass("clon");
+                };
+                $("a").on("click", function(e) {
+                    var $target = $($(this).attr("href")+"i").addClass("clactive").removeClass("clnon-active");
+                    $els.not($target).addClass("clnon-active").removeClass("clactive");
+                    $(this).addClass("clon");
+                    $(".cl").not(this).removeClass("clon");
+                    e.preventDefault();
+                });
+                if (location.hash) {
+                    setTimeout(function() {
+                    window.scrollTo(0, 0);
+                    }, 1);
+                };
             });
 	</script>
 	
