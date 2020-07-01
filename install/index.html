@@ -129,9 +129,27 @@
         </style>
     </noscript>
     <style>
-        .installfocus {
-            border-style: dashed;
-            border-color: yellow;
+        @-webkit-keyframes installfocus {
+            from, to {
+                outline-style: dotted;
+                outline-color: rgba(85,85,0,0.3);
+            }
+            50% {
+                outline-color: rgba(255,255,0,0.2);
+            }
+        }
+        @keyframes installfocus {
+            from, to {
+                outline-style: dotted;
+                outline-color: rgba(85, 85, 0, 0.2);
+            }
+            50% {
+                outline-color: rgba(255,255,0,0.175);
+            }
+        }
+        .installfocus{
+            -webkit-animation: installfocus 3s linear infinite;
+            animation: installfocus 3s linear infinite;
         }
     </style>
 </head>
@@ -215,9 +233,7 @@
                             <div class="post-block page">
                                 <header class="post-header">
 
-                                    <h1 class="post-title" itemprop="name headline">
-
-</h1>
+                                    <h1 class="post-title" itemprop="name headline"></h1>
 
                                     <div class="post-meta">
 
@@ -421,6 +437,9 @@
             var hash = window.location.hash.substring(1);
             if (hash == "fabulous") {
                 $("#fabulous").addClass("installfocus");
+                $(document).one("click",function(){
+                    $("#fabulous").removeClass("installfocus");
+                });
             }
 
         });</script>
