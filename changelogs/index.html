@@ -231,7 +231,61 @@
   <a href="#fabulous" class="cl" style="margin-left: 15px;">Fabulous Shaders</a>
 
   <div id="vibrant" class="cl-element clactive">
-      <pre><code class="changelog">Vibrant shaders v1.27:
+      <pre><code class="changelog">Vibrant shaders v1.28
+- Support for 1.16.1 (with all its new ids)
+- Added support for blue and grey nether biomes (soul sand valley, twisted forest, basalt deltas - fog color, lighting would make lava blue aswell)
+- Adjusted nether visuals to be more like vanilla (fog strength)
+- Added metallic and polished reflections for blocks like iron, polished granite and an option to toggle it. (metallic and polished blocks are defined in block.properties)
+- Added an option to toggle water reflections.
+- Removed option Reflections, all reflections can now be adjusted individually.
+- Added an option to toggle metallic reflections.
+- Added an option to toggle polished reflections.
+- Added an option to adjust the amount of sky reflection for metallic and polished blocks.
+- Added an option to adjust the reflection strength of metallic and polished reflections.
+- Added underwater godrays - godrays now shine through the water surface
+- Added support for default minecraft clouds and expanded option clouds (off, default, 2D, VL, VL+2D)
+- Added support for waving dead bushes
+- Added support for waving red mushrooms
+- Added support for waving brown mushrooms
+- Added support for lit furnaces, blast furnaces and smokers. (they are now set to emissive while lit, which means bloom is applied to them)
+- Reworked reflection visuals for stained glass and ice.
+- Reworked the rendering pipeline for terrain and entities, it should now be less prone to bugs and run faster
+- Improved performance by 5-10% compared to v1.27 (with metallic and polished reflections off)
+- Improved option wave size, it now also adjusts the actual water waves. (water, refraction and caustic waves)
+- Improved water lighting / shading
+- Improved emissive lighting rendering on rain.
+- Improved reflections, refractions and caustics code.
+- Improved caustics rendering.
+- Improved entities rendering and shadows, entities are now correctly affected by ambient occlusion
+- Improved shadows and lighting on hand in first person, shadows are not correctly applied to hand and handheld items.
+- Improved block selection and leads rendering.
+- Improved ambient occlusion and reduced performance hit by filtering it with TAA/noise. It is also visible through transparency now.
+- Improved shadow quality on translucent items like stained glass.
+- Fixed celshading, it is now correctly applied to entities. (mobs etc)
+- Fixed issues with enchantment effects
+- Fixed an issue with parallax mapping
+- Fixed reflection issues with translucent textures/layers - wrong reflections in general (or at least is should be fixed)
+- Fixed fog rendering through transparency in the nether
+- Fixed and improved chunk border frame rendering
+- Fixed betroots in version 1.12.2 and lower (wrong id)
+- Expanded option pom depth.
+- Encoded and reduced the amount of used buffers
+- Various code rewrites and optimizations
+Known issues:
+- Slime mobs are no longer transparent/translucent, this is a tradeoff to store more data in one buffer / to fix other issues.
+- Colors of the block breaking animation are not rendered correctly in overworld
+- Lighting bolts are not rendered correctly
+- The blend betweeen basalt biome and other biomes is not as smooth
+- Dropped transparent and enchanted items are not rendered correctly
+- Default MC drop shadow appears in nether near lightsources MAAAYBE OPTIFINE BUG?
+If you encounter a weird glitch, try pressing F3+R ingame to reload the shaderpack, that might fix it.
+Todo:
+- Port changes to end and nether shaders
+- Rework transparency and particles rendering pipeline
+- Specular mapping (reflections)
+- Fix more bugs
+
+Vibrant shaders v1.27:
 - Support for MC 1.15+
 - Added support for reflective honeyblocks. (just like slimeblocks)
 - Added Raytraced shadows and and option to toggle it. (requires shadows to be enabled)
