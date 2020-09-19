@@ -231,7 +231,24 @@
   <a href="#fabulous" class="cl" style="margin-left: 15px;">Fabulous Shaders</a>
 
   <div id="vibrant" class="cl-element clactive">
-      <pre><code class="changelog">Vibrant shaders v1.28
+      <pre><code class="changelog">Vibrant shaders v1.281:
+- Supports 1.16.3
+- Added waving lanterns and option to toggle it. (WIP)
+- Improved nether fog and sky rendering, everything is smooth now since it uses slightly adjusted vanilla fog.
+- Implemented a workaround that should fix missing shadows, optifine bug. Thanks to fayer3
+- Updated depth of field, the transition between clear and blurry is no longer instant but smooth instead.
+- Added an ingame option to toggle the smooth transition. It might causes some issues on the edge of your hand if enabled ..might be an optifine or amd driver bug.
+- Updated option "dof strength" it is a slider now and is called blur amount instead. Also expanded value range.
+- Fixed various shader compiling errors
+- Fixed rain rendering on hand
+- Fixed weird outlines on linux drivers (workaround, sky blur also blurs the distance, same as with amd cards)
+- Fixed block entities rendering if bump or parallax mapping is enabled (chests, signs etc)
+- Fixed banner rendering, patterns are displayed correctly now but there are some transparency issues against emissive lighting..
+- Fixed transparency rendering issues against the sky
+- Fixed lightning bolt rendering
+- Fixed nether fog issues in older MC versions.
+
+Vibrant shaders v1.28
 - Support for 1.16.1 (with all its new ids)
 - Added support for blue and grey nether biomes (soul sand valley, twisted forest, basalt deltas - fog color, lighting would make lava blue aswell)
 - Adjusted nether visuals to be more like vanilla (fog strength)
