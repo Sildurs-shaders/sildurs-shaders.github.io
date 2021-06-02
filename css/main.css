@@ -1237,6 +1237,7 @@ pre .javascript .function {
 .menu .menu-item span.exturl {
   display: block;
   font-size: 13px;
+  font-weight: bold;
   line-height: inherit;
   border-bottom: 1px solid transparent;
   transition-property: border-color;
@@ -3047,7 +3048,7 @@ ul.breadcrumb li+li:last-child {
 }
 a,
 span.exturl {
-  color: #315aa7;
+  color: #4365a6;
 }
 h1 {
   color: rgba(255,255,255,0.478);
