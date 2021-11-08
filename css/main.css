@@ -429,11 +429,11 @@ table {
   font-size: 14px;
 }
 table.downloads {
-  max-width: 612px;
+  max-width: 810px;
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 14px;
-  margin-left: 15px;
+  font-size: 12px;
+  margin-left: 0px;
 }
 table.downloads > tbody > tr:hover {
   background: rgba(0,0,0,0.1)
