@@ -423,13 +423,12 @@ kbd {
   margin: 0px;
 }
 table {
-  width: 100%;
+  width: 75%;
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 14px;
 }
 table.downloads {
-  max-width: 810px;
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 12px;
