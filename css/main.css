@@ -488,6 +488,17 @@ body {
   padding: 100px 0 70px;
   width: calc(100% - 20px);
 }
+@media (min-width: 2000px) {
+  table.downloads {
+    font-size: 16px;
+  }
+  table.downloads > tbody th, table.downloads > tbody td {
+    line-height: 23px;
+  }
+  table.downloads tr > td:first-child {
+    width: 472px;
+  }
+}
 @media (min-width: 1200px) {
   .container .header-inner {
     width: 1160px;
