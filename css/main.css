@@ -431,7 +431,7 @@ table {
 table.downloads {
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 12px;
+  font-size: 14px;
   margin-left: 0px;
 }
 table.downloads > tbody > tr:hover {
