@@ -242,7 +242,60 @@
                                         <a href="#fabulous" class="cl" style="margin-left: 15px;">Fabulous Shaders</a>
 
                                         <div id="vibrant" class="cl-element clactive">
-                                            <pre><code class="changelog">Vibrant shaders v1.56:
+                                            <pre><code class="changelog">Vibrant shaders v2.0
+- This update is a rewrite of Vibrant Shaders. (the last major rewrite was probably back in ~2018)
+- Reworked Rendering Pipeline to properly support solid and translucent blocks/entities.
+- Reworked Water and Glass reflections, added support for reflections through transparency (water reflections behind stained glass etc.)
+- Reworked Water rendering and colors.
+- Reworked Metallic and Polished reflections.
+- Reworked Rain reflections, added support for reflective rain puddles.
+- Reworked Distant Horizons reflections to support reflections through transparency. (still has blending issues)
+- Reworked Voxy reflections to support reflections through transparency. (Voxy support in Vibrant Shaders is better than DH)
+- Reworked and improved Water caustics, they are now properly affected by shadows.
+- Reworked Sky rendering, adjusted colors and fixed color banding.
+- Reworked Fog rendering, utilizing Minecrafts default fog rendering system.
+- Reworked TAA, fixed various blurring issues and improved visuals.
+- Reworked and optimized Godrays for better performance.
+- Reworked and optimized Bloom for better performance.
+- Reworked Volumetric Lighting and improved rays filtering.
+- Reworked overall brightness to be more in between Minecraft "Moody" and maxed out. (can be tweaked ingame)
+- Reworked various ingame settings and improved layout.
+- Reworked various ancient code.
+- Added support for MC 26.2.
+- Added PCSS Shadow filtering.
+- Added wetness effect after rain.
+- Added support for MC moon phases.
+- Added support for per biome fog.
+- Added Distant Horizons support for Nether and End.
+- Added Voxy support for Nether and End.
+- Added support for dynamic water color per biome. (blend of default water color)
+- Added setting: Custom water color. (reworked)
+- Added setting: Weather Intensity.
+- Added various code fallbacks for older Minecraft versions, so MC 1.7.10+ is still supported. (reflections through transparency are not supported in MC 1.7.10 - 1.15.2 due to missing OF features)
+- Added support for Iris fork: Angelica. (reflections through transparency are supported with Angelica)
+- Improved default skybox and clouds rendering. (can be enabled in ingame settings)
+- Improved fog and sky rendering in end to be more like vanilla MC.
+- Improved shader settings to increase performance more when effects are disabled.
+- Improved emissive lighting rendering to be more like vanilla MC.
+- Improved particles rendering.
+- Improved water rendering in caves.
+- Improved brightness in caves.
+- Fixed weather rendering.
+- Fixed a lot of rendering issues with transparency.
+- Fixed Distant Horizons water clipping through terrain.
+- Fixed Voxy rendering issues.
+- Fixed flickering volumetric clouds.
+- Fixed emissive lighting with Distant Horizons.
+- Fixed various bloom rendering issues.
+- Fixed various color clipping issues.
+- Fixed various fog rendering issues.
+- Fixed TAA in MC 1.7.10.
+Known issues:
+- Some inaccurate reflections.
+- Fog density is higher in optifine compared to iris.
+- Entities too dark or too bright, in iris some solid and translucent entities are rendered twice, causing some issues.
+												
+Vibrant shaders v1.56:
 - Fixed end lighting in iris 1.21.10+ 
 
 Vibrant shaders v1.55:
