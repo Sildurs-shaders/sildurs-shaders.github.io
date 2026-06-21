@@ -440,7 +440,7 @@ table.downloads > tbody > tr:hover {
 table.downloads > tbody th, table.downloads > tbody td {
   border: 0px;
   padding: 0px;
-  padding-right: 20px;
+  padding-right: 8px;
   font-weight: bold;
   color: #8a8a8a;
   line-height: 20px;
@@ -452,7 +452,10 @@ table.downloads > tbody th:last-child, table.downloads > tbody td:last-child {
   padding-right: 0px;
 }
 table.downloads tr > td:first-child {
-  width: 454px;
+  width: 100%;
+}
+table.downloads tr > td:not(:first-child) {
+  min-width: 68px;
 }
 caption,
 th,
