@@ -498,9 +498,6 @@ body {
   table.downloads > tbody th, table.downloads > tbody td {
     line-height: 23px;
   }
-  table.downloads tr > td:first-child {
-    width: 472px;
-  }
 }
 @media (min-width: 1200px) {
   .container .header-inner {
